@@ -1,0 +1,263 @@
+.inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    /* 센터로 오게하는 방법 */
+    padding: 0 15px;
+}
+
+
+.blind {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+}
+
+
+.wrapper {}
+
+
+.header {}
+
+.header .inner {
+    display: flex;
+    align-items: center;
+    height: 100px;
+}
+
+.header .gnb {
+    margin: 0 0 0 auto;
+}
+
+.header .gnb>ul {
+    display: flex;
+    gap: 40px;
+}
+
+.header .gnb>ul>li {
+    position: relative;
+}
+
+.header .gnb>ul>li>a {
+    display: block;
+    font-size: "";
+}
+
+.header .gnb>ul>li~li::before {
+    /* li~li : 첫번쨰 바 없애는법 */
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -20px;
+    width: 1px;
+    height: 12px;
+    background: #ddd;
+    transform: translate(0, -50%);
+}
+
+.header .search {
+    margin: 0 0 0 50px;
+}
+
+.header .search i {
+    font-size: 30px;
+}
+
+
+.main_visual {
+    position: relative;
+}
+
+.main_visual .main_slide {}
+
+.main_visual .main_slide figure {
+    position: relative;
+    height: 600px;
+}
+
+.main_visual .main_slide .itm01 {
+    background: url(../images/mainvisual01.jpg) no-repeat center center/cover;
+}
+
+.main_visual .main_slide .itm02 {
+    background: url(../images/mainvisual02.jpg) no-repeat center center/cover;
+}
+
+.main_visual .main_slide .itm03 {
+    background: url(../images/mainvisual03.jpg) no-repeat center center/cover;
+}
+
+.main_visual .main_slide .slogan {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1200px;
+    padding: 0 15px;
+}
+
+.main_visual .main_slide .slogan strong {
+    display: block;
+    margin: 0 0 10px 0;
+    font-size: 50px;
+    font-weight: 900;
+    color: #fff;
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+    /* text shaodw : 위아래 좌우 번짐정도 그림자색상 순서 */
+}
+
+.main_visual .main_slide .slogan p {
+    margin: 0 0 30px 0;
+    font-size: 15px;
+    font-weight: 300;
+    color: #fff;
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+    /* text shaodw : 위아래 좌우 번짐정도 그림자색상 순서 */
+}
+
+/* <more 같은 버튼 만들기> */
+.main_visual .main_slide .slogan a {
+
+    display: inline-block;
+    background: #333;
+    color: #fff;
+    padding: 3px 12px 5px 12px;
+}
+
+
+.main_visual .main_slide .itm02 .slogan strong {
+    color: #444;
+    text-shadow: 0 0 3px rgba(255, 255, 255, 0.3);
+    /* text shaodw : 위아래 좌우 번짐정도 그림자색상 순서 */
+}
+
+.main_visual .main_slide .itm02 .slogan p {
+    color: #444;
+    text-shadow: 0 0 3px rgba(255, 255, 255, 0.3);
+    /* text shaodw : 위아래 좌우 번짐정도 그림자색상 순서 */
+}
+
+.main_visual .dots {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: 0 0 0 585px;
+    transform: translate(-100%, -50%);
+    background: #fff;
+    border: 1px solid #ddd;
+    user-select: none;
+    /* 드래그 안되게 설정 */
+}
+
+.main_visual .dots li {
+    padding: 10px;
+}
+
+.main_visual .dots li~li {
+    border-top: 1px solid #ddd;
+}
+
+.main_visual .dots .btn {
+    cursor: pointer;
+    /* 커서 올리면 손가락 모양 나오게끔 하는방법 */
+}
+
+
+/* <메인 슬라이드 양쪽 화살표 제작하기> */
+.main_visual .arrows {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 1400px;
+    width: 100%;
+}
+
+.main_visual:hover .arrows {
+    display: block;
+    /* 화살표 만든 슬라이드에 커서 올렸을때 화살표 생기는것 */
+    /* hover : 올리다 */
+}
+
+.main_visual .arrows i {
+    font-size: 30px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 10px;
+}
+
+
+.main_visual .arrows .left {
+    position: absolute;
+    top: 0;
+    left: 15px;
+}
+
+.main_visual .arrows .right {
+    position: absolute;
+    top: 0;
+    right: 15px;
+}
+
+
+.main_content {
+    padding: 100px 0;
+}
+
+.main_content .tit {
+    margin: 0 auto 30px auto;
+}
+
+.main_content .tit h2 {
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+}
+
+.main_content .tit p {
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.main_content .content {
+    display: flex;
+    gap: 30px;
+}
+
+.main_content .content figure {
+    flex: 1;
+    text-align: center;
+}
+
+.main_content .content figure .box {
+    margin: 0 0 20px 0;
+    border-radius: 0% 100% 100% 0% / 30% 0% 100% 70%;
+    /* 기존 네모 박스를 동그라미로 변경 */
+    overflow: hidden;
+    /* 박스를 벗어나지 않으면서 이미지 안에서 이미지 커졌다 작아졌다 하는것 */
+}
+
+.main_content .content figure strong {
+    display: block;
+    margin: 0 0 20px 0;
+}
+
+/* <구매하기 버튼 만들기 */
+.main_content .content figure a {
+    display: inline-block;
+    border: 1px solid #ddd;
+    padding: 5px 12px;
+}
+
+/* <이미지에 커서 올렸을때 이미지 커지는 속도 조절> */
+.main_content .content figure img {
+    transition: 0.5s;
+}
+
+/* <이미지에 커서 올렸을때 이미지 커지는것> */
+.main_content .content figure:hover img {
+    transform: scale(1.2);
+}
